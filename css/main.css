@@ -304,9 +304,9 @@ h2,
 h3 {
   page-break-after: avoid;
 }
-.nameLabel {
-  font-size: 15px;
 }
+.nameLabel {
+    font-size: 23px;
 }
 #overlay {
   /*height: 100%;
