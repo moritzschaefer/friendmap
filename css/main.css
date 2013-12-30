@@ -6,6 +6,7 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+
 /* ==========================================================================
 Base styles: opinionated defaults
 ========================================================================== */
@@ -305,4 +306,24 @@ h3 {
 }
 .nameLabel {
   font-size: 15px;
+}
+}
+#overlay {
+  /*height: 100%;
+  width: 100%;*/
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: #000000;
+  opacity: 0.6;
+}
+#loginButton {
+  width: 300px;
+  top: 150px;
+  left: 500px;
+  background-color: #FFFFFF;
+  position: absolute;
+  color: #00000;
 }

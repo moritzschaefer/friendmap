@@ -37,13 +37,6 @@
           if(statusResponse.status === 'connected')
               main();
               else {
-      FB.login(function(response){
-           if (response.authResponse) {
-             } else {
-              showAuthError();
-             }
-          }, {"scope": "user_groups"});
-
               }
 
           });
@@ -75,6 +68,9 @@
         </script>
         <! -- Site begins here -->
         <div id="docText"></div>
-        <div id="map-canvas"/>
+        <div id="map-canvas"></div>
+        <div id="overlay">
+          <a href="#" onclick="onLoginClick()" id="loginButton">Hey, Klick hier um dich bei Facebook einzuloggen. Das ist nötig damit die Adressen gelesen und angezeigt werden können.</a>
+        </div>
     </body>
 </html>

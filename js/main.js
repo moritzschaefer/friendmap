@@ -1,4 +1,5 @@
 function main() {
+  $('#overlay').css("display", "none");
   FB.api('/362342307175776', function(doc) {
     showInMap(parseMessage(doc.message));
   });
@@ -65,6 +66,7 @@ function addLocation() {
 }
 function showAuthError() {
   // notify failed login
+  alert('facebook login error. ask moritz');
 
 }
 function initMaps() {
@@ -75,4 +77,13 @@ function initMaps() {
   map = new google.maps.Map(document.getElementById("map-canvas"),
       mapOptions);
   geocoder = new google.maps.Geocoder();
+}
+function onLoginClick() {
+      FB.login(function(response){
+           if (response.authResponse) {
+             main();
+             } else {
+              showAuthError(response);
+             }
+          }, {"scope": "user_groups"});
 }
